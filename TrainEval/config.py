@@ -7,9 +7,9 @@ cxr_path = r"D:\data\Project Medical AI\datasets_v2.0\cxr"
 train_path = r"D:\data\Project Medical AI\datasets_v2.0\train_subjects.csv"
 val_path = r"D:\data\Project Medical AI\datasets_v2.0\val_subjects.csv"
 test_path = r"D:\data\Project Medical AI\datasets_v2.0\test_subjects.csv"
-log_config_filepath = r'../logs/oci_transformers.log'
+log_config_filepath = r'../logs/oci_POMDP.log'
 
-model_type = 'transformers' #POMDP, single_snapshot, transformers, latent
+model_type = 'POMDP' #POMDP, single_snapshot, transformers, latent
 
 config = {
     'init_epoch': 0,
@@ -27,7 +27,7 @@ config = {
         'loss_t1': 1., 'loss_t2': 1., 'loss_t3': 1.,
         'loss_type': 1., 'loss_pres': 1., 'loss_lab': 1., 'loss_micro': 1., 'loss_radio': 1.
     },
-    'model_save_dir': r"D:\data\Project Medical AI\code_v2.0\ckpts_transformers",
+    'model_save_dir': r"D:\data\Project Medical AI\code_v2.0\ckpts_POMDP",
     'resume': False,
     'load_state_model_path': r'',
     'load_episode_embedding_model_path': r'',
