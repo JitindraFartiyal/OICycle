@@ -7,9 +7,9 @@ cxr_path = r"D:\data\Project Medical AI\datasets_v2.0\cxr"
 train_path = r"D:\data\Project Medical AI\datasets_v2.0\train_subjects.csv"
 val_path = r"D:\data\Project Medical AI\datasets_v2.0\val_subjects.csv"
 test_path = r"D:\data\Project Medical AI\datasets_v2.0\test_subjects.csv"
-log_config_filepath = r'../logs/oci_POMDP.log'
+log_config_filepath = r'../logs/oci_POMDP_single.log'
 
-model_type = 'POMDP' #POMDP, single_snapshot, transformers, latent
+model_type = 'single_snapshot' #POMDP, single_snapshot, transformers, latent
 
 config = {
     'init_epoch': 0,
@@ -27,11 +27,11 @@ config = {
         'loss_t1': 1., 'loss_t2': 1., 'loss_t3': 1.,
         'loss_type': 1., 'loss_pres': 1., 'loss_lab': 1., 'loss_micro': 1., 'loss_radio': 1.
     },
-    'model_save_dir': r"D:\data\Project Medical AI\code_v2.0\ckpts_POMDP",
-    'resume': False,
-    'load_state_model_path': r'',
-    'load_episode_embedding_model_path': r'',
-    'load_init_state_path': r''
+    'model_save_dir': r"D:\data\Project Medical AI\code_v2.0\ckpts_POMDP_single",
+    'resume': True,
+    'load_state_model_path': r"D:\data\Project Medical AI\code_v2.0\ckpts_POMDP_single\state_model_3.pth",
+    'load_episode_embedding_model_path': r"D:\data\Project Medical AI\code_v2.0\ckpts_POMDP_single\episode_embedding_model_3.pth",
+    'load_init_state_path': r"D:\data\Project Medical AI\code_v2.0\ckpts_POMDP_single\init_state_3.pth"
 }
 
 labevents_stats = pd.read_parquet('../Datasets/labevents_stats.parquet')
